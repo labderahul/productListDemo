@@ -53,8 +53,8 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 /*.product-modal .social li a:hover{background:#e67e22;color:#fff}*/
 /*.product-modal .product-discount-label,.product-grid3 .product-new-label{background-color:#e67e22;color:#fff;font-size:17px;padding:2px 10px;position:absolute;right:10px;top:10px;transition:all .3s}*/
 /*.product-modal .product-content{z-index:-1;padding:15px;text-align:left}*/
-/*.product-modal .title{font-size:14px;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}*/
-/*.product-modal .title a{color:#414141}*/
+.product-modal .title{font-size:14px;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.product-modal .title a{color:#414141}
 /*.product-modal .price{color:#000;font-size:16px;letter-spacing:1px;font-weight:600;margin-right:2px;display:inline-block}*/
 /*.product-modal .price span{color:#909090;font-size:14px;font-weight:500;letter-spacing:0;text-decoration:line-through;text-align:left;display:inline-block;margin-top:-2px}*/
 /*.product-modal .rating{padding:0;margin:-22px 0 0;list-style:none;text-align:right;display:block}*/
@@ -67,3 +67,59 @@ h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 
 .product-modal:hover .pic-1{opacity:0}
 .product-modal:hover .pic-2{opacity:1}
+
+
+
+
+/********************  Preloader Demo-14 *******************/
+.loader14{width:90px;height:90px;margin:40px auto}
+.loader14 .loader-inner{width:60px;height:60px;position:relative;margin:0 auto}
+.loader14 .loader-inner div{content:"";width:16px;height:16px;border-radius:50%;background:#00bee0;position:absolute;top:10px;left:10px;transform-origin:20px 20px;-webkit-animation:loading-14 2s infinite cubic-bezier(.5,0,.5,1);animation:loading-14 2s infinite cubic-bezier(.5,0,.5,1)}
+.loader14 .loader-inner .box-2{top:10px;left:auto;right:10px;transform-origin:-4px 20px;-webkit-animation:loading-142 2s infinite cubic-bezier(.5,0,.5,1);animation:loading-142 2s infinite cubic-bezier(.5,0,.5,1)}
+.loader14 .loader-inner .box-3{top:auto;left:auto;right:10px;bottom:10px;transform-origin:-4px -4px;-webkit-animation:loading-143 2s infinite cubic-bezier(.5,0,.5,1);animation:loading-143 2s infinite cubic-bezier(.5,0,.5,1)}
+.loader14 .loader-inner .box-4{top:auto;bottom:10px;transform-origin:20px -4px;-webkit-animation:loading-144 2s infinite cubic-bezier(.5,0,.5,1);animation:loading-144 2s infinite cubic-bezier(.5,0,.5,1)}
+.loader14 .text{display:block;font-size:12px;color:#00bee0;text-align:center}
+@-webkit-keyframes loading-14{
+    0%{transform:rotate(90deg)}
+    50%{transform:rotate(180deg)}
+    75%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@keyframes loading-14{
+    0%{transform:rotate(90deg)}
+    50%{transform:rotate(180deg)}
+    75%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes loading-142{
+    0%,25%{transform:rotate(90deg)}
+    25%{transform:rotate(180deg)}
+    75%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@keyframes loading-142{
+    0%,25%{transform:rotate(90deg)}
+    25%{transform:rotate(180deg)}
+    75%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes loading-143{
+    0%,25%{transform:rotate(90deg)}
+    50%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@keyframes loading-143{
+    0%,25%{transform:rotate(90deg)}
+    50%{transform:rotate(270deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes loading-144{
+    0%,25%{transform:rotate(90deg)}
+    50%{transform:rotate(180deg)}
+    100%,75%{transform:rotate(360deg)}
+}
+@keyframes loading-144{
+    0%,25%{transform:rotate(90deg)}
+    50%{transform:rotate(180deg)}
+    100%,75%{transform:rotate(360deg)}
+}

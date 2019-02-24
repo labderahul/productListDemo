@@ -624,6 +624,22 @@ $(document).ready(function () {
     "categories": []
   };
 
+  $.ajax({
+    type: 'GET',
+    dataType: "json",
+    url: url,
+    success: function (response) {
+      console.log("success!");
+      response = response;
+    }
+  }).fail(function () {
+    console.log("failed!");
+  });
+
+  hideLoader();
+
+  // return;
+
   this.block = '<div class="row">';
   for (let i = 0; i < response.groups.length; i++) {
     console.log(response.groups[i]);
@@ -644,9 +660,16 @@ $(document).ready(function () {
 
   createPopup(response.groups[0]);
 
+  function hideLoader() {
+    setTimeout(function () {
+      $(".loader").hide();
+      $(".containerProduct").css({visibility: 'visible'});
+    }, 3000)
+  }
+
   function createPopup(productObj) {
-    console.clear();
-    $('.modal-body').append(createProductBlock(productObj));
+    // console.clear();
+    $('.modal-body').append(createPopUpData(productObj));
     console.log('createPopup', productObj);
   }
 
@@ -663,6 +686,26 @@ $(document).ready(function () {
       '                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>' +
       '                    </ul>' +
       '                    <span class="product-new-label">New</span>' +
+      '                </div>' +
+      '                <div class="product-content">' +
+      '                    <h3 class="title"><a href="#">'+productObj.name+'</a></h3>' +
+      '                    <div class="price">'+productObj.priceRange.selling.low+'$ - '+ productObj.priceRange.selling.high+'$</div>' +
+      '                    <div class="rating">' +
+      '                    </div>' +
+      '                </div>' +
+      '            </div>' +
+      '        </div>';
+
+  }
+
+  function createPopUpData(productObj) {
+    return '<div class="col-md-6 col-sm-6 productThumb" style="margin: auto;text-align: center">' +
+      '            <div class="product-modal" data-toggle="modal" data-target="#exampleModal">' +
+      '                <div class="product-image3">' +
+      '                    <a href="#">' +
+      '                        <img class="pic-1" src='+productObj.images[0].href+'>' +
+      '                        <img class="pic-2" src='+productObj.images[1].href+'>' +
+      '                    </a>' +
       '                </div>' +
       '                <div class="product-content">' +
       '                    <h3 class="title"><a href="#">'+productObj.name+'</a></h3>' +

@@ -11,15 +11,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <!-- you need to include the shieldui css and js assets in order for the charts to work -->
-    <link rel="stylesheet" type="text/css" href="css/light/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.min.css" />
     <script type="text/javascript" src="lib/shieldui-all.min.js"></script>
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid h-100 loader">
+    <div class="row justify-content-center h-100">
+        <div class="col-md-12 hidden-md-down">
+            <div class="loader14">
+                <div class="loader-inner">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                    <div class="box-4"></div>
+                </div>
+                <span class="text">loading</span>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+</div>
+<div class="container containerProduct" style="visibility: hidden">
     <h3 class="h3">Shopping Demo </h3>
 </div>
-<hr>
 
 <!------------------------ Modal ---------------------------------------->
 <!-- Button trigger modal -->
@@ -33,7 +48,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
